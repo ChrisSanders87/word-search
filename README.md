@@ -13,8 +13,11 @@ original code provided by:
   http://calin-jageman.net
 
 description of code: https://calin-jageman.net/lab/word_search/
+
 custom word-searches created using Discovery Education's Puzzlemaker: http://puzzlemaker.discoveryeducation.com/WordSearchSetupForm.asp
 
 Demo1: original example, trimmed
+
 Demo2: original example, executing js from git
+
 Demo3: AM/PM example
