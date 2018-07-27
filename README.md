@@ -21,3 +21,5 @@ Demo1: original example, trimmed
 Demo2: original example, executing js from git
 
 Demo3: AM/PM example
+
+header documents pull css style sheets from http://calin-jageman.net
