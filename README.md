@@ -1,4 +1,4 @@
-# word-search
+# Word-Search
 
 original code provided by:
   Robert Calin-Jageman
