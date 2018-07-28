@@ -22,7 +22,8 @@ Demo3: AM/PM example
 
 # Instructions based on correspondence with Bob Calin-Jageman
 
-To customize word-search:
+To customize word-search...
+
   *Always:* In "Look and Feel", change the HTML header to one which references the correct paths for externally-housed js files
     - One option is to store on github and use https://rawgit.com/ to extract a production URL
   1. In "Survey Flow", change the randomizer to select between a different number of conditions and add the conditions by copying and modifying the appropriate questions
