@@ -263,8 +263,8 @@
    var rsize = size;
    var csize = size
    if (this.settings.condition > 2) {
-      rsize = 14;
-      csize = 11;
+      rsize = 10;
+      csize = 10;
    }
     for (var row = 0; row < rsize; row++) {
       for (var col = 0; col < csize; col++) {
@@ -332,66 +332,50 @@
 [	'O', 	'Z', 	'A', 	'C', 	'G', 	'R', 	'N', 	'T', 	'A', 	'O', 	'Y', 	'D', 	'L', 	'G', 	'X', 	'C', 	'M', 	'C'	]
 ];
 
-	var impossible_matrix = [
-[	'V', 	'H', 	'W', 	'X', 	'S', 	'C', 	'E', 	'P', 	'T', 	'E', 	'R', 	'C', 	'R', 	'S', 	'P', 	'S', 	'J', 	'T'	],
-[	'S', 	'T', 	'T', 	'T', 	'N', 	'X', 	'B', 	'Y', 	'D', 	'X', 	'L', 	'M', 	'W', 	'K', 	'A', 	'F', 	'B', 	'C'	],
-[	'G', 	'O', 	'A', 	'R', 	'C', 	'W', 	'O', 	'T', 	'A', 	'Y', 	'T', 	'E', 	'S', 	'V', 	'L', 	'O', 	'G', 	'J'	],
-[	'C', 	'T', 	'N', 	'D', 	'O', 	'W', 	'O', 	'F', 	'V', 	'N', 	'N', 	'R', 	'G', 	'H', 	'A', 	'D', 	'G', 	'P'	],
-[	'E', 	'O', 	'B', 	'F', 	'B', 	'S', 	'D', 	'R', 	'E', 	'C', 	'O', 	'A', 	'O', 	'V', 	'C', 	'T', 	'I', 	'A'	],
-[	'R', 	'I', 	'L', 	'J', 	'J', 	'A', 	'N', 	'M', 	'C', 	'N', 	'E', 	'U', 	'S', 	'H', 	'E', 	'E', 	'P', 	'A'	],
-[	'J', 	'E', 	'N', 	'O', 	'P', 	'B', 	'U', 	'O', 	'O', 	'M', 	'S', 	'N', 	'N', 	'T', 	'K', 	'I', 	'U', 	'H'	],
-[	'H', 	'C', 	'T', 	'S', 	'N', 	'F', 	'W', 	'H', 	'C', 	'E', 	'O', 	'P', 	'T', 	'N', 	'Y', 	'G', 	'W', 	'L'	],
-[	'E', 	'T', 	'Y', 	'R', 	'E', 	'Y', 	'H', 	'O', 	'H', 	'M', 	'R', 	'T', 	'I', 	'D', 	'H', 	'N', 	'L', 	'N'	],
-[	'H', 	'L', 	'R', 	'P', 	'N', 	'E', 	'T', 	'O', 	'L', 	'X', 	'L', 	'G', 	'S', 	'S', 	'U', 	'I', 	'K', 	'J'	],
-[	'Y', 	'T', 	'C', 	'I', 	'A', 	'H', 	'L', 	'I', 	'I', 	'O', 	'H', 	'A', 	'M', 	'U', 	'N', 	'K', 	'V', 	'F'	],
-[	'W', 	'S', 	'L', 	'D', 	'B', 	'D', 	'H', 	'M', 	'I', 	'T', 	'R', 	'U', 	'E', 	'E', 	'C', 	'X', 	'E', 	'W'	],
-[	'O', 	'T', 	'O', 	'K', 	'I', 	'B', 	'T', 	'U', 	'K', 	'D', 	'J', 	'D', 	'B', 	'R', 	'T', 	'K', 	'R', 	'A'	],
-[	'S', 	'E', 	'A', 	'L', 	'M', 	'U', 	'C', 	'T', 	'W', 	'I', 	'N', 	'D', 	'S', 	'O', 	'R', 	'C', 	'U', 	'C'	],
-[	'Z', 	'N', 	'E', 	'T', 	'N', 	'E', 	'M', 	'A', 	'I', 	'L', 	'R', 	'A', 	'P', 	'Z', 	'M', 	'I', 	'L', 	'B'	],
-[	'Z', 	'T', 	'H', 	'R', 	'O', 	'N', 	'E', 	'B', 	'P', 	'A', 	'T', 	'R', 	'O', 	'N', 	'A', 	'G', 	'E', 	'W'	],
-[	'V', 	'P', 	'K', 	'M', 	'V', 	'G', 	'F', 	'T', 	'R', 	'A', 	'D', 	'I', 	'T', 	'I', 	'O', 	'N', 	'R', 	'Q'	],
-[	'O', 	'Z', 	'A', 	'C', 	'G', 	'R', 	'N', 	'T', 	'A', 	'O', 	'Y', 	'D', 	'L', 	'G', 	'X', 	'C', 	'M', 	'C'	]
+	var empty_matrix = [
+[	'O',	'D',	'U',	'K',	'F',	'U',	'B',	'J',	'X',	'A'	],
+[	'K',	'B',	'X',	'T',	'Q',	'B',	'M',	'S',	'R',	'W'	],
+[	'R',	'E',	'X',	'M',	'I',	'U',	'U',	'W',	'M',	'E'	],
+[	'G',	'H',	'W',	'S',	'L',	'Q',	'U',	'K',	'U',	'Z'	],
+[	'X',	'I',	'B',	'X',	'C',	'R',	'V',	'N',	'Q',	'L'	],
+[	'N',	'Q',	'Y',	'I',	'F',	'A',	'W',	'X',	'J',	'N'	],
+[	'R',	'C',	'B',	'K',	'M',	'M',	'L',	'U',	'T',	'N'	],
+[	'B',	'O',	'C',	'Z',	'R',	'N',	'S',	'S',	'M',	'J'	],
+[	'O',	'T',	'M',	'X',	'I',	'F',	'P',	'F',	'C',	'L'	],
+[	'O',	'I',	'N',	'G',	'Y',	'Y',	'O',	'K',	'A',	'A'	]
 ];
 
-	var power_matrix = [
-[	'K',	'X',	'N',	'A',	'V',	'K',	'W',	'U',	'D',	'K',	'B'	],
-[	'C',	'O',	'F',	'F',	'E',	'E',	'N',	'O',	'E',	'T',	'S'	],
-[	'E',	'Y',	'I',	'N',	'F',	'L',	'U',	'E',	'N',	'C',	'E'	],
-[	'T',	'X',	'F',	'L',	'J',	'C',	'F',	'N',	'E',	'M',	'X'	],
-[	'D',	'X',	'E',	'H',	'O',	'U',	'S',	'E',	'Y',	'W',	'D'	],
-[	'A',	'A',	'M',	'C',	'A',	'R',	'I',	'S',	'U',	'R',	'R'	],
-[	'O',	'U',	'E',	'M',	'U',	'S',	'T',	'R',	'G',	'L',	'A'	],
-[	'S',	'Y',	'T',	'X',	'O',	'T',	'R',	'N',	'S',	'U',	'O'	],
-[	'J',	'R',	'E',	'H',	'T',	'M',	'I',	'T',	'O',	'E',	'B'	],
-[	'N',	'J',	'E',	'A',	'O',	'D',	'J',	'V',	'G',	'C',	'W'	],
-[	'H',	'C',	'I',	'R',	'N',	'R',	'B',	'E',	'E',	'Q',	'G'	],
-[	'K',	'C',	'O',	'L',	'C',	'L',	'I',	'O',	'J',	'E',	'K'	],
-[	'M',	'U',	'H',	'E',	'C',	'Y',	'O',	'T',	'S',	'W',	'O'	],
-[	'X',	'K',	'J',	'K',	'S',	'X',	'Z',	'O',	'Y',	'S',	'Z'	]
+	var PM5_matrix = [
+[	'O',	'D',	'U',	'K',	'F',	'U',	'B',	'J',	'X',	'A'	],
+[	'K',	'B',	'S',	'U',	'N',	'S',	'E',	'T',	'R',	'W'	],
+[	'R',	'E',	'X',	'M',	'I',	'U',	'U',	'W',	'M',	'T'	],
+[	'S',	'U',	'P',	'P',	'E',	'R',	'U',	'K',	'U',	'W'	],
+[	'X',	'I',	'B',	'X',	'C',	'R',	'V',	'N',	'Q',	'I'	],
+[	'N',	'Q',	'C',	'O',	'C',	'K',	'T',	'A',	'I',	'L'	],
+[	'R',	'C',	'B',	'K',	'S',	'M',	'L',	'U',	'T',	'I'	],
+[	'B',	'O',	'C',	'U',	'R',	'N',	'S',	'S',	'M',	'G'	],
+[	'O',	'T',	'D',	'X',	'I',	'F',	'P',	'F',	'C',	'H'	],
+[	'O',	'I',	'N',	'G',	'Y',	'Y',	'O',	'K',	'A',	'T'	]
 ];
 
-	var neutral_matrix = [
-[	'J',	'O',	'Q',	'L',	'X',	'J',	'V',	'D',	'F',	'Y',	'D'	],
-[	'O',	'S',	'N',	'B',	'C',	'G',	'Z',	'R',	'R',	'R',	'R'	],
-[	'T',	'P',	'V',	'U',	'L',	'N',	'C',	'K',	'E',	'F',	'A'	],
-[	'K',	'L',	'Z',	'J',	'X',	'I',	'L',	'G',	'T',	'C',	'O'	],
-[	'Z',	'L',	'B',	'H',	'E',	'D',	'O',	'L',	'A',	'O',	'B'	],
-[	'D',	'C',	'E',	'Y',	'N',	'L',	'C',	'U',	'W',	'F',	'F'	],
-[	'W',	'Y',	'N',	'V',	'O',	'I',	'K',	'P',	'N',	'F',	'K'	],
-[	'E',	'Q',	'I',	'X',	'H',	'U',	'K',	'L',	'H',	'E',	'L'	],
-[	'D',	'W',	'Z',	'V',	'P',	'B',	'L',	'P',	'O',	'E',	'A'	],
-[	'J',	'F',	'A',	'X',	'E',	'E',	'A',	'M',	'U',	'H',	'M'	],
-[	'O',	'C',	'G',	'R',	'L',	'X',	'H',	'H',	'S',	'X',	'P'	],
-[	'V',	'W',	'A',	'K',	'E',	'F',	'C',	'O',	'E',	'C',	'K'	],
-[	'C',	'G',	'M',	'R',	'T',	'M',	'A',	'F',	'S',	'N',	'H'	],
-[	'U',	'F',	'P',	'G',	'B',	'C',	'X',	'T',	'K',	'J',	'J'	]
+	var AM5_matrix = [
+[	'O',	'D',	'U',	'K',	'F',	'U',	'B',	'J',	'X',	'A'	],
+[	'K',	'B',	'A',	'L',	'A',	'R',	'M',	'S',	'R',	'C'	],
+[	'R',	'E',	'X',	'M',	'I',	'U',	'U',	'W',	'M',	'O'	],
+[	'B',	'R',	'E',	'A',	'K',	'F',	'A',	'S',	'T',	'F'	],
+[	'X',	'I',	'B',	'X',	'C',	'R',	'V',	'N',	'Q',	'F'	],
+[	'N',	'Q',	'Y',	'S',	'U',	'N',	'R',	'I',	'S',	'E'	],
+[	'R',	'C',	'B',	'K',	'W',	'M',	'L',	'U',	'T',	'E'	],
+[	'B',	'O',	'C',	'A',	'R',	'N',	'S',	'S',	'M',	'J'	],
+[	'O',	'T',	'D',	'X',	'I',	'F',	'P',	'F',	'C',	'L'	],
+[	'O',	'I',	'N',	'G',	'Y',	'Y',	'O',	'K',	'A',	'A'	]
 ];
 
 	var csize = size;
 	var rsize = size;
 	if (this.settings.condition > 2) { 
-		csize = 11; 
-		rsize = 14;
+		csize = 10; 
+		rsize = 10;
 	}
 	
 	for (var row = 0; row < rsize; row++) {
@@ -405,7 +389,7 @@
 		} 
 	     if(this.settings.condition == 1) {
 			var item = {
-			letter: impossible_matrix [row][col], // Default value
+			letter: empty_matrix [row][col], // Default value
 			row: row,
 			col: col
 			}
@@ -413,7 +397,7 @@
 	     
 	     if(this.settings.condition == 4) {
 			var item = {
-			letter: neutral_matrix [row][col], // Default value
+			letter: AM5_matrix [row][col], // Default value
 			row: row,
 			col: col
 			}
@@ -422,7 +406,7 @@
 	     
 	     if(this.settings.condition == 5) {
 			var item = {
-			letter: power_matrix  [row][col], // Default value
+			letter: PM5_matrix  [row][col], // Default value
 			row: row,
 			col: col
 			}
@@ -445,8 +429,8 @@
 		columncount = 9;
 	}
 	if (this.settings.condition > 2) {
-		rowcount = 14;
-		columncount = 11;
+		rowcount = 10;
+		columncount = 10;
 	}
 	
 	
@@ -490,8 +474,8 @@
     var rsize = this.settings.gridSize;
     var csize = this.settings.gridSize;
     if (this.settings.condition > 2) {
-       rsize = 14;
-       csize = 11;
+       rsize = 10;
+       csize = 10;
     }
     for (var row = 0; row < rsize; row++) {
       for (var col = 0; col < csize; col++) {
@@ -592,7 +576,7 @@
   }
 
   /**
-   * MouseÂ event - Mouse down
+   * Mouseï¿½ event - Mouse down
    * @param {Object} item
    */
   WordSeach.prototype.onMousedown = function(item) {
